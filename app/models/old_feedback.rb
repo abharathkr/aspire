@@ -1,0 +1,2 @@
+class OldFeedback < ApplicationRecord
+end

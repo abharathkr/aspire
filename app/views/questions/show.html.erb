@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question.question %>
+</p>
+
+<h3>Choices:</h3>
+<div id="choices">
+	<%= render @question.choices %>
+</div>
+
+<%= form_for [@question, Choice.new] do |f| %>
+	<p>
+		<%= f.label :choice, "New Choice" %>
+		<%= f.text_area :choice %>
+	</p>
+	<p> <%= f.submit "Add Choice", class: "btn btn-primary" %> </p>
+<% end %>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>
