@@ -15,6 +15,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       set_minimum_password_length
+      flash[:notice] = "Your email id is not listed with us.
+                        Please contact the operations team to get your email id listed 
+                        and then you can register using that email id"
       redirect_to :back
 #      respond_with resource
     end

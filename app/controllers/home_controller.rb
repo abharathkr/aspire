@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     else
       flash[:notice] = "Feedback aint posted"
     end
-    redirect_to root_url
+    
   end
   
   def feedbacks
