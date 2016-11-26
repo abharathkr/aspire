@@ -9,6 +9,8 @@
     </div><br>
     <% @feedbacks.each do |f| %>
     <div class="row div-ques">
+    <% @user = User.find_by(id: f.user_id) %>
+    <% @email = Email.find_by(email: @user.email) %>
       <div class="col-md-2"><%= f.f1 %></div>
       <div class="col-md-2"><%= f.f2 %></div>
       <div class="col-md-2"><%= f.f3 %></div>
@@ -17,7 +19,9 @@
     </div><br>
     <div class="row">
       <div class="col-md-2">Comment: </div>
-      <div class="col-md-10"><%= f.comment %></div>
+      <div class="col-md-6"><%= f.comment %></div>
+      <div class="col-md-2"><%= @email.user_name %></div>
+      <div class="col-md-2"><%= @email.email %></div>
     </div><br>
     <% end %>
   </div>

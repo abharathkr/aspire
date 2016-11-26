@@ -6,22 +6,27 @@ class HomeController < ApplicationController
   
   def submitfeedback
   	if @feedback = OldFeedback.create(old_feedback_params)
-      flash[:notice] = "Feedback successfully posted"
+      flash.discard
     else
       flash[:notice] = "Feedback aint posted"
+      redirect_to root_url
     end
     
   end
   
   def feedbacks
 #  	@feedbacks = OldFeedback.all.order(updated_at: :desc)
+    authenticate_admin
     @feedbacks = OldFeedback.all
+  end
+
+  def unauthorized
   end
 
 private
   
   def old_feedback_params
-    params.permit(:f1 ,:f2 ,:f3 ,:f4 ,:f5 , :email, :comment)
+    params.permit(:f1 ,:f2 ,:f3 ,:f4 ,:f5 , :email, :comment, :user_id)
   end
 
 end

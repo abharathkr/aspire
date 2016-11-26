@@ -1,6 +1,6 @@
 class EmailsController < ApplicationController
   before_action :set_email, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin
   # GET /emails
   # GET /emails.json
   def index
@@ -25,7 +25,8 @@ class EmailsController < ApplicationController
   # POST /emails.json
   def create
     @email = Email.new(email_params)
-
+#    @email.email = email_params[email]
+#    @email.user_name = email_params[user_name]
     respond_to do |format|
       if @email.save
         format.html { redirect_to @email, notice: 'Email was successfully created.' }
@@ -69,6 +70,8 @@ class EmailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def email_params
-      params.require(:email).permit(:email)
+#      params.permit(:email,:user_name)
+      params.require(:email).permit(:email,:user_name)
+      #byebug
     end
 end

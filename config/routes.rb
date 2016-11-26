@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :admins
 #  devise_for :users
   get 'home/feedback'
   get 'home/feedbacks'
   post 'home/submitfeedback'
+  get 'home/unauthorized'
 
   resources :questions do 
     resources :choices

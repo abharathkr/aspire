@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122180108) do
+ActiveRecord::Schema.define(version: 20161126192555) do
+
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "user_name"
+  end
 
   create_table "choices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.text     "choice",      limit: 65535
@@ -24,6 +31,7 @@ ActiveRecord::Schema.define(version: 20161122180108) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "user_name"
   end
 
   create_table "old_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -35,6 +43,8 @@ ActiveRecord::Schema.define(version: 20161122180108) do
     t.text     "comment",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_old_feedbacks_on_user_id", using: :btree
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -61,4 +71,5 @@ ActiveRecord::Schema.define(version: 20161122180108) do
   end
 
   add_foreign_key "choices", "questions"
+  add_foreign_key "old_feedbacks", "users"
 end
