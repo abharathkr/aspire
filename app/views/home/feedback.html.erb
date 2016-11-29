@@ -8,65 +8,76 @@
     </div><br><br>
     <div class="row">
     <div class="col-md-offset-2 col-md-8">
-    <%= form_tag( home_submitfeedback_url , method: :post , multipart: true ) do -%>
+    <%= form_tag( home_submitfeedback_url , method: :post , multipart: true ) do %>
     <%= hidden_field_tag 'user_id' , current_user.id %> 
         <div class="row">
             <div class="div-ques">
-              <div class="text-ques-content">This training program was useful for you</div>
+              <div class="text-ques-content">Is there any improvement with respect to your knowledge, after joining aspire ?</div>
               <div class="text-ques-content">
-                <%= radio_button_tag 'f1', 'Agree', :required => true %>
-                <%= label_tag 'f1' , 'Agree' %>
-                <%= radio_button_tag 'f1', 'Neutral' %>
-                <%= label_tag 'f1' , 'Neutral' %>
-                <%= radio_button_tag 'f1', 'Disagree' %>
-                <%= label_tag 'f1' , 'Disagree' %>
+                <%= radio_button_tag 'f1', 'Yes', :required => true %>
+                <%= label_tag 'f1' , 'Yes' %>
+                <%= radio_button_tag 'f1', 'No' %>
+                <%= label_tag 'f1' , 'No' %><br>
+                <textarea name="comment1" placeholder="Comment" rows="2" style="width: 66%"></textarea>
               </div><br>
-              <div class="text-ques-content">It was easy to follow the training instructions</div>
+              <div class="text-ques-content">How was the core java course ?</div>
               <div class="text-ques-content">
-                <%= radio_button_tag 'f2', 'Strongly Agree', :required => true %>
-                <%= label_tag 'f2' , 'Strongly Agree' %>
-                <%= radio_button_tag 'f2', 'Agree' %>
-                <%= label_tag 'f2' , 'Agree' %>
-                <%= radio_button_tag 'f2', 'Neutral' %>
-                <%= label_tag 'f2' , 'Neutral' %>
-                <%= radio_button_tag 'f2', 'Disagree' %>
-                <%= label_tag 'f2' , 'Disagree' %>
+                <%= radio_button_tag 'f2', 'Excellent', :required => true %>
+                <%= label_tag 'f2' , 'Excellent' %>
+                <%= radio_button_tag 'f2', 'Good' %>
+                <%= label_tag 'f2' , 'Good' %>
+                <%= radio_button_tag 'f2', 'Bad' %>
+                <%= label_tag 'f2' , 'Bad' %><br>
+                <textarea name="comment2" placeholder="Comment" rows="2" style="width: 66%"></textarea>
               </div><br>
-              <div class="text-ques-content">Content and Language in which the instructor communicated to you was understandable</div>
+              <div class="text-ques-content">How was the personality development course ?</div>
               <div class="text-ques-content">
-                <%= radio_button_tag 'f3', 'Yes', :required => true %>
-                <%= label_tag 'f3' , 'Yes' %>
-                <%= radio_button_tag 'f3', 'No' %>
-                <%= label_tag 'f3' , 'No' %>
+                <%= radio_button_tag 'f3', 'Excellent', :required => true %>
+                <%= label_tag 'f3' , 'Excellent' %>
+                <%= radio_button_tag 'f3', 'Good' %>
+                <%= label_tag 'f3' , 'Good' %>
+                <%= radio_button_tag 'f3', 'Bad' %>
+                <%= label_tag 'f3' , 'Bad' %><br>
+                <textarea name="comment3" placeholder="Comment" rows="2" style="width: 66%"></textarea>
               </div><br>
-              <div class="text-ques-content">The training program was organized in an effective manner</div>
+              <div class="text-ques-content">How was the project orientation program with Nirmalya Das ?</div>
               <div class="text-ques-content">
-                <%= radio_button_tag 'f4', 'Yes', :required => true %>
-                <%= label_tag 'f4' , 'Yes' %>
-                <%= radio_button_tag 'f4', 'No' %>
-                <%= label_tag 'f4' , 'No' %>
-                <%= radio_button_tag 'f4', 'Could have been better' %>
-                <%= label_tag 'f4' , 'Could have been better' %>
+                <%= radio_button_tag 'f4', 'Excellent', :required => true %>
+                <%= label_tag 'f4' , 'Excellent' %>
+                <%= radio_button_tag 'f4', 'Good' %>
+                <%= label_tag 'f4' , 'Good' %>
+                <%= radio_button_tag 'f4', 'Bad' %>
+                <%= label_tag 'f4' , 'Bad' %><br>
+                <textarea name="comment4" placeholder="Comment" rows="2" style="width: 66%"></textarea>
               </div><br>
-              <div class="text-ques-content">In the future, would you attend another program suitable for you, organized by us ?</div>
-              <div class="text-ques-content">
+              <div class="text-ques-content">Which technologies are you looking for a job in ?</div>
+              <textarea name="comment5" required placeholder="technologies" rows="2" style="width: 66%"></textarea>
+              <br>
+
+              <div class="text-ques-content">What is it that you want to learn at this point of time in your career?</div>
+              <textarea name="comment6" required placeholder="Comment" rows="2" style="width: 66%"></textarea>
+              <br>
+
+              <div class="text-ques-content">What kind of news do you follow ?</div>
+              <textarea name="comment7" required placeholder="Comment" rows="2" style="width: 66%"></textarea>
+              <br>
+
+              <div class="text-ques-content">Did Aspire team respond to your concerns or queries within a week ?</div>
                 <%= radio_button_tag 'f5', 'Yes', :required => true %>
                 <%= label_tag 'f5' , 'Yes' %>
                 <%= radio_button_tag 'f5', 'No' %>
-                <%= label_tag 'f5' , 'No' %>
-                <%= radio_button_tag 'f5', 'May be' %>
-                <%= label_tag 'f5' , 'May be' %>
-              </div><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="div-ques">
-              <div class="text-ques-content">Please write your comments here!</div>
-              <textarea name="comment" rows="5" style="width: 500px"></textarea>
+                <%= label_tag 'f5' , 'No' %><br>
+              <textarea name="comment8" required placeholder="Concerns" rows="2" style="width: 66%"></textarea>
+              <br>
+
+              <div class="text-ques-content">Any other comment:</div>
+              <textarea name="comment" placeholder="General comment" rows="2" style="width: 66%"></textarea>
+              <br>
+
               <div class="text-ques-content"><%= submit_tag 'Submit Feedback' , class: "btn btn-success" %></div>
             </div>
         </div>
-    <% end -%>
+    <% end %>
     </div>
     </div>
     </div>

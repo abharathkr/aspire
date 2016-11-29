@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161126192555) do
+ActiveRecord::Schema.define(version: 20161129230211) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20161126192555) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.integer  "user_id"
+    t.string   "comment1"
+    t.string   "comment2"
+    t.string   "comment3"
+    t.string   "comment4"
+    t.string   "comment5"
+    t.string   "comment6"
+    t.string   "comment7"
+    t.string   "comment8"
     t.index ["user_id"], name: "index_old_feedbacks_on_user_id", using: :btree
   end
 

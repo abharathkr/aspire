@@ -26,7 +26,7 @@ class HomeController < ApplicationController
 private
   
   def old_feedback_params
-    params.permit(:f1 ,:f2 ,:f3 ,:f4 ,:f5 , :email, :comment, :user_id)
+    params.permit(:f1 ,:f2 ,:f3 ,:f4 ,:f5 , :comment1, :comment2, :comment3, :comment4, :comment5, :comment6, :comment7, :comment8, :comment, :user_id)
   end
 
 end

@@ -8,21 +8,42 @@
       <div class="col-md-2">In the future, would you attend another program suitable for you, organized by us ?</div>
     </div><br>
     <% @feedbacks.each do |f| %>
-    <div class="row div-ques">
     <% @user = User.find_by(id: f.user_id) %>
     <% @email = Email.find_by(email: @user.email) %>
+    <div class="row div-ques">
       <div class="col-md-2"><%= f.f1 %></div>
+      <div class="col-md-6"><%= f.comment1 %></div>
+    </div>
+    <div class="row div-ques">
       <div class="col-md-2"><%= f.f2 %></div>
+      <div class="col-md-6"><%= f.comment2 %></div>
+    </div>
+    <div class="row div-ques">
       <div class="col-md-2"><%= f.f3 %></div>
+      <div class="col-md-6"><%= f.comment3 %></div>
+    </div>
+    <div class="row div-ques">
       <div class="col-md-2"><%= f.f4 %></div>
-      <div class="col-md-2"><%= f.f5 %></div>
-    </div><br>
+      <div class="col-md-6"><%= f.comment4 %></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8"><%= f.comment5 %></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8"><%= f.comment6 %></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8"><%= f.comment7 %></div>
+    </div>
+        <div class="row">
+      <div class="col-md-8"><%= f.comment8 %></div>
+    </div>
     <div class="row">
       <div class="col-md-2">Comment: </div>
       <div class="col-md-6"><%= f.comment %></div>
       <div class="col-md-2"><%= @email.user_name %></div>
       <div class="col-md-2"><%= @email.email %></div>
-    </div><br>
+    </div><hr>
     <% end %>
   </div>
 </section>
