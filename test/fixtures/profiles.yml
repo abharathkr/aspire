@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  email: MyString
+  phonenumber: 
+  degree1p: MyString
+  degree1c: MyString
+  degree2p: MyString
+  degree2c: MyString
+  twelvep: MyString
+  twelvec: MyString
+  tenthp: MyString
+  tenthc: MyString
+  technicalskills: MyText
+  nontechnicalskills: MyText
+  analyticalskills: MyText
+  projects: MyText
+  coursestaken: MyText
+  goodat: MyText
+  dreamjob: MyText
+  awards: MyText
+  internship: MyText
+  user: one
+
+two:
+  place: MyString
+  email: MyString
+  phonenumber: 
+  degree1p: MyString
+  degree1c: MyString
+  degree2p: MyString
+  degree2c: MyString
+  twelvep: MyString
+  twelvec: MyString
+  tenthp: MyString
+  tenthc: MyString
+  technicalskills: MyText
+  nontechnicalskills: MyText
+  analyticalskills: MyText
+  projects: MyText
+  coursestaken: MyText
+  goodat: MyText
+  dreamjob: MyText
+  awards: MyText
+  internship: MyText
+  user: two

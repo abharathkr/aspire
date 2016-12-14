@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129234322) do
+ActiveRecord::Schema.define(version: 20161211041221) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email"
@@ -55,6 +55,36 @@ ActiveRecord::Schema.define(version: 20161129234322) do
     t.index ["user_id"], name: "index_old_feedbacks_on_user_id", using: :btree
   end
 
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "place"
+    t.bigint   "phonenumber"
+    t.string   "degree1p"
+    t.string   "degree1c"
+    t.string   "degree2p"
+    t.string   "degree2c"
+    t.string   "twelvep"
+    t.string   "twelvec"
+    t.string   "tenthp"
+    t.string   "tenthc"
+    t.text     "technicalskills",    limit: 65535
+    t.text     "nontechnicalskills", limit: 65535
+    t.text     "analyticalskills",   limit: 65535
+    t.text     "projects",           limit: 65535
+    t.text     "coursestaken",       limit: 65535
+    t.text     "goodat",             limit: 65535
+    t.text     "dreamjob",           limit: 65535
+    t.text     "awards",             limit: 65535
+    t.text     "internship",         limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "tenths"
+    t.string   "twelveplace"
+    t.string   "degree1branch"
+    t.string   "degree2branch"
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  end
+
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.text     "question",   limit: 65535
     t.datetime "created_at",               null: false
@@ -80,4 +110,5 @@ ActiveRecord::Schema.define(version: 20161129234322) do
 
   add_foreign_key "choices", "questions"
   add_foreign_key "old_feedbacks", "users"
+  add_foreign_key "profiles", "users"
 end

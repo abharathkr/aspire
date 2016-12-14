@@ -1,0 +1,2 @@
+json.extract! profile, :id, :place, :phonenumber, :degree1p, :degree1c, :degree1branch, :degree2p, :degree2c, :degree2branch, :twelvep, :twelvec, :twelveplace, :tenthp, :tenthc, :tenths, :technicalskills, :nontechnicalskills, :analyticalskills, :projects, :coursestaken, :goodat, :dreamjob, :awards, :internship, :user_id, :created_at, :updated_at
+json.url profile_url(profile, format: :json)

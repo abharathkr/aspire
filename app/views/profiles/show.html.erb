@@ -1,0 +1,129 @@
+<div class="form-group col-md-6 col-md-offset-3">
+<h4>My Profile</h4>
+<p>
+  <strong>Place:</strong>
+  <%= @profile.place %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @profile.phonenumber %>
+</p>
+
+<p>
+  <strong>Degree1p:</strong>
+  <%= @profile.degree1p %>
+</p>
+
+<p>
+  <strong>Degree1c:</strong>
+  <%= @profile.degree1c %>
+</p>
+
+<p>
+  <strong>Degree1Branch:</strong>
+  <%= @profile.degree1branch %>
+</p>
+
+<p>
+  <strong>Degree2p:</strong>
+  <%= @profile.degree2p %>
+</p>
+
+<p>
+  <strong>Degree2c:</strong>
+  <%= @profile.degree2c %>
+</p>
+
+<p>
+  <strong>Degree2Branch:</strong>
+  <%= @profile.degree2branch %>
+</p>
+
+<p>
+  <strong>Twelvep:</strong>
+  <%= @profile.twelvep %>
+</p>
+
+<p>
+  <strong>Twelvec:</strong>
+  <%= @profile.twelvec %>
+</p>
+
+<p>
+  <strong>TwelvePlace:</strong>
+  <%= @profile.twelveplace %>
+</p>
+
+<p>
+  <strong>Tenthp:</strong>
+  <%= @profile.tenthp %>
+</p>
+
+<p>
+  <strong>Tenthc:</strong>
+  <%= @profile.tenthc %>
+</p>
+
+<p>
+  <strong>Tenthschool:</strong>
+  <%= @profile.tenths %>
+</p>
+
+<p>
+  <strong>Technicalskills:</strong>
+  <%= @profile.technicalskills %>
+</p>
+
+<p>
+  <strong>Nontechnicalskills:</strong>
+  <%= @profile.nontechnicalskills %>
+</p>
+
+<p>
+  <strong>Analyticalskills:</strong>
+  <%= @profile.analyticalskills %>
+</p>
+
+<p>
+  <strong>Projects:</strong>
+  <%= @profile.projects %>
+</p>
+
+<p>
+  <strong>Coursestaken:</strong>
+  <%= @profile.coursestaken %>
+</p>
+
+<p>
+  <strong>Goodat:</strong>
+  <%= @profile.goodat %>
+</p>
+
+<p>
+  <strong>Dreamjob:</strong>
+  <%= @profile.dreamjob %>
+</p>
+
+<p>
+  <strong>Awards:</strong>
+  <%= @profile.awards %>
+</p>
+
+<p>
+  <strong>Internship:</strong>
+  <%= @profile.internship %>
+</p>
+<% @user = User.find_by(id: @profile.user_id) %>
+<% @email = Email.find_by(email: @user.email) %>
+<p>
+  <strong>User Name:</strong>
+  <%= @email.user_name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @email.email %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %>
+</div>

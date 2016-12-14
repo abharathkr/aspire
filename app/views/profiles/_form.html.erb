@@ -1,0 +1,182 @@
+<%= form_for(profile) do |f| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-group col-md-6 col-md-offset-3">
+  <div class="col-md-4">
+    <%= f.label :present_place %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :place , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :phone_number %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :phonenumber , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>10th Percentage</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :tenthp , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>10th School</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :tenths , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>10th Place</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :tenthc , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>12th Percentage</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :twelvep , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>12th College</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :twelvec , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>12th Place</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :twelveplace , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 1 Percentage</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree1p , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 1 College</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree1c , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 1 Branch</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree1branch , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 2 Percentage</label>  
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree2p , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 2 College</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree2c , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <label>Degree 2 Branch</label>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_field :degree2branch , :class => "form-control"%>
+  </div>
+
+
+  <div class="col-md-4">
+    <%= f.label :technical_skills %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :technicalskills , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :non_technical_skills %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :nontechnicalskills , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :analytical_skills %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :analyticalskills , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :projects %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :projects , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :courses_taken %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :coursestaken , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :good_at %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :goodat , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :dream_job %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :dreamjob , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :awards %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :awards , :class => "form-control"%>
+  </div>
+
+  <div class="col-md-4">
+    <%= f.label :internship %>
+  </div>
+  <div class="col-md-8">
+    <%= f.text_area :internship , :class => "form-control"%>
+  </div>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %> 
+
+  <div class="actions">
+    <%= f.submit :Submit, :class => "btn btn-success" %>
+  </div>
+  </div>
+<% end %>

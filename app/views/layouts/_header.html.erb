@@ -19,6 +19,9 @@
             <li><a href="/home/feedbacks"><i class="fa fa-file-text"></i>&nbsp;Feedback Report</a></li>
             <li><a href="/emails"><i class="fa fa-file-text"></i>&nbsp;Emails</a></li>
             <li><a href="/admins"><i class="fa fa-file-text"></i>&nbsp;Admins</a></li>
+            <li><a href="/profiles"><i class="fa fa-file-text"></i>&nbsp;Profiles</a></li>
+          <% else %>
+            <li><a href="/profiles/show"><i class="fa fa-file-text"></i>&nbsp;My Profile</a></li>
           <% end %>
           <li><a href="/home/feedback"><i class="fa fa-file-text"></i>&nbsp;Home</a></li>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>

@@ -2,12 +2,12 @@
 <section>    
     <div class="container feedback">
     <div class="row">
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-3 col-md-8">
           <div class="text-ques-content" style="margin-top: 20px">We thank you for giving us the opportunity to serve you. <br>Please help us serve you better by providing valuable feedback</div>
         </div>
     </div><br><br>
     <div class="row">
-    <div class="col-md-offset-2 col-md-8">
+    <div class="col-md-offset-3 col-md-8">
     <%= form_tag( home_submitfeedback_url , method: :post , multipart: true ) do %>
     <%= hidden_field_tag 'user_id' , current_user.id %> 
         <div class="row">
