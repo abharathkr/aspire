@@ -10,173 +10,127 @@
       </ul>
     </div>
   <% end %>
-<div class="form-group col-md-6 col-md-offset-3">
-  <div class="col-md-4">
+<div class="col-md-10 col-md-offset-1">
+  <div class="form-group form-group">
     <%= f.label :present_place %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :place , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :phone_number %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :phonenumber , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>10th Percentage</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :tenthp , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>10th School</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :tenths , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>10th Place</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :tenthc , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>12th Percentage</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :twelvep , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>12th College</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :twelvec , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>12th Place</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :twelveplace , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>Degree 1 Percentage</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :degree1p , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>Degree 1 College</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :degree1c , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>Degree 1 Branch</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :degree1branch , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
-    <label>Degree 2 Percentage</label>  
-  </div>
-  <div class="col-md-8">
+  <div class="form-group">
+    <label>Degree 2 Percentage</label>
     <%= f.text_field :degree2p , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>Degree 2 College</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :degree2c , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <label>Degree 2 Branch</label>
-  </div>
-  <div class="col-md-8">
     <%= f.text_field :degree2branch , :class => "form-control"%>
   </div>
 
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :technical_skills %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :technicalskills , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :non_technical_skills %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :nontechnicalskills , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :analytical_skills %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :analyticalskills , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :projects %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :projects , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :courses_taken %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :coursestaken , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :good_at %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :goodat , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :dream_job %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :dreamjob , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
+  <div class="form-group">
     <%= f.label :awards %>
-  </div>
-  <div class="col-md-8">
     <%= f.text_area :awards , :class => "form-control"%>
   </div>
 
-  <div class="col-md-4">
-    <%= f.label :internship %>
-  </div>
-  <div class="col-md-8">
+  <div class="form-group">
+    <%= f.label :internship %>  
     <%= f.text_area :internship , :class => "form-control"%>
   </div>
 
   <%= f.hidden_field :user_id, :value => current_user.id %> 
 
   <div class="actions">
-    <%= f.submit :Submit, :class => "btn btn-success" %>
+    <%= f.submit :Submit, :class => "btn btn-info btn-raised" %>
   </div>
   </div>
 <% end %>

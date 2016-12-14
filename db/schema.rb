@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20161211041221) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "user_name"
   end
 
-  create_table "choices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "choices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "choice",      limit: 65535
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 20161211041221) do
     t.index ["question_id"], name: "index_choices_on_question_id", using: :btree
   end
 
-  create_table "emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "emails", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "user_name"
   end
 
-  create_table "old_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "old_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "f1"
     t.string   "f2"
     t.string   "f3"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20161211041221) do
     t.index ["user_id"], name: "index_old_feedbacks_on_user_id", using: :btree
   end
 
-  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "place"
     t.bigint   "phonenumber"
     t.string   "degree1p"
@@ -85,13 +85,13 @@ ActiveRecord::Schema.define(version: 20161211041221) do
     t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
 
-  create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "question",   limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

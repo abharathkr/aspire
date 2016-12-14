@@ -1,6 +1,13 @@
-<div class="form-group col-md-6 col-md-offset-3">
-<h1>New Profile</h1>
+<div class="container-fluid order">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well well-md">
+        <fieldset>
+          <legend class="text-center">New Profile</legend>
+            <%= render 'form', profile: @profile %>
+        </fieldset>
+      </div>
+    </div>
+  </div>
 </div>
-<%= render 'form', profile: @profile %>
-
 <%= link_to 'Back', profiles_path %>

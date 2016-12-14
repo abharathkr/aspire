@@ -1,6 +1,13 @@
-<div class="form-group col-md-6 col-md-offset-3">
-<h4>Editing Profile</h4>
+<div class="container-fluid order">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well well-md">
+        <fieldset>
+          <legend class="text-center">Edit Profile</legend>
+            <%= render 'form', profile: @profile %>
+        </fieldset>
+      </div>
+    </div>
+  </div>
 </div>
-<%= render 'form', profile: @profile %>
-
-<%= link_to 'Show', @profile %>
+<%= link_to 'Back', profiles_path %>
