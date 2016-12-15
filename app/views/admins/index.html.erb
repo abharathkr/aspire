@@ -1,29 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="well well-md a">
+        <fieldset>
+          <legend class="text-center">Admins</legend>
+        </fieldset><table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<h1>Admins</h1>
+        <tbody>
+          <% @admins.each do |admin| %>
+            <tr>
+              <td><%= admin.email %></td>
+              <td><%= admin.user_name %></td>
+              <td><%= link_to 'Show', admin %></td>
+              <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+              <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+        </table>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <br>
 
-  <tbody>
-    <% @admins.each do |admin| %>
-      <tr>
-        <td><%= admin.email %></td>
-        <td><%= admin.user_name %></td>
-        <td><%= link_to 'Show', admin %></td>
-        <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
-        <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Admin', new_admin_path %>
+        <%= link_to 'New Admin', new_admin_path,class: "btn btn-raised btn-success" %>
+      </div>
+    </div>
+  </div>
+</div>

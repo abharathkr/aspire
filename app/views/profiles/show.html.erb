@@ -1,139 +1,143 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="well well-md">
-        <fieldset>
-          <div class="col-md-7 col-md-offset-2 col-xs-7 col-xs-offset-2"><legend class="text-center"><strong>My Profile</strong></legend></div>
-          <%= link_to edit_profile_path(@profile) do %>
-            <div class="col-xs-1 col-md-1"><i class="material-icons">mode_edit</i></div>
-          <% end -%>
-          <br><br><br>
-          <div class="row">
-            <div class="col-md-4"><strong>Place:</strong></div>
-            <div class="col-md-8"><%= @profile.place %></div>
-          </div><br>
+ <section class="section">
+ <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 a">
+        <div class="well well-md a">
+          <fieldset>
+            <div class="row">
+              <div class="col-md-3 col-md-offset-2 col-xs-1"><legend><strong>My Profile</strong></legend></div>
+              <%= link_to edit_profile_path(@profile) do %>
+                <div class="col-xs-1 col-md-2"><i class="material-icons">mode_edit</i></div>
+              <% end -%>
+            </div>
+              <br><br><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Place:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.place %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Phonenumber:</strong></div>
-            <div class="col-md-8"><%= @profile.phonenumber %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Phonenumber:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.phonenumber %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree1 Percentage:</strong></div>
-            <div class="col-md-8"><%= @profile.degree1p %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree1 Percentage:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree1p %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree1 College:</strong></div>
-            <div class="col-md-8"><%= @profile.degree1c %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree1 College:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree1c %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree1 Branch:</strong></div>
-            <div class="col-md-8"><%= @profile.degree1branch %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree1 Branch:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree1branch %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree2 Percentage:</strong></div>
-            <div class="col-md-8"><%= @profile.degree2p %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree2 Percentage:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree2p %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree2 College:</strong></div>
-            <div class="col-md-8"><%= @profile.degree2c %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree2 College:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree2c %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Degree2 Branch:</strong></div>
-            <div class="col-md-8"><%= @profile.degree2branch %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Degree2 Branch:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.degree2branch %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Twelve Percentage:</strong></div>
-            <div class="col-md-8"><%= @profile.twelvep %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Twelve Percentage:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.twelvep %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Twelve College:</strong></div>
-            <div class="col-md-8"><%= @profile.twelvec %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Twelve College:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.twelvec %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Twelve Place:</strong></div>
-            <div class="col-md-8"><%= @profile.twelveplace %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Twelve Place:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.twelveplace %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Tenth Percentage:</strong></div>
-            <div class="col-md-8"><%= @profile.tenthp %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Tenth Percentage:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.tenthp %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Tenth College:</strong></div>
-            <div class="col-md-8"><%= @profile.tenthc %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Tenth College:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.tenthc %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Tenth School:</strong></div>
-            <div class="col-md-8"><%= @profile.tenths %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Tenth School:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.tenths %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Technical skills:</strong></div>
-            <div class="col-md-8"><%= @profile.technicalskills %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Technical skills:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.technicalskills %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Nontechnical skills:</strong></div>
-            <div class="col-md-8"><%= @profile.nontechnicalskills %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Nontechnical skills:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.nontechnicalskills %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Analytical skills:</strong></div>
-            <div class="col-md-8"><%= @profile.analyticalskills %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Analytical skills:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.analyticalskills %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Projects:</strong></div>
-            <div class="col-md-8"><%= @profile.projects %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Projects:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.projects %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Courses taken:</strong></div>
-            <div class="col-md-8"><%= @profile.coursestaken %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Courses taken:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.coursestaken %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Good at:</strong></div>
-            <div class="col-md-8"><%= @profile.goodat %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Good at:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.goodat %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Dream job:</strong></div>
-            <div class="col-md-8"><%= @profile.dreamjob %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Dream job:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.dreamjob %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Awards:</strong></div>
-            <div class="col-md-8"><%= @profile.awards %></div>
-          </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Awards:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.awards %></div>
+            </div><br>
 
-          <div class="row">
-            <div class="col-md-4"><strong>Internship:</strong></div>
-            <div class="col-md-8"><%= @profile.internship %></div>
-          </div><br>
-            <% @user = User.find_by(id: @profile.user_id) %>
-            <% @email = Email.find_by(email: @user.email) %>
-          <div class="row">
-            <div class="col-md-4"><strong>User Name:</strong></div>
-            <div class="col-md-8"><%= @email.user_name %></div>
-          </div><br>
-          <div class="row">
-            <div class="col-md-4"><strong>Email:</strong></div>
-            <%= @email.email %>
-          </div><br>
-        </fieldset>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Internship:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @profile.internship %></div>
+            </div><br>
+              <% @user = User.find_by(id: @profile.user_id) %>
+              <% @email = Email.find_by(email: @user.email) %>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>User Name:</strong></div>
+              <div class="col-md-2 col-xs-2"><%= @email.user_name %></div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-1 col-xs-1"><strong>Email:</strong></div>
+              <%= @email.email %> col-xs-2
+            </div><br>
+          </fieldset>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
